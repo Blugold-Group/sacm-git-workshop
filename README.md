@@ -1,4 +1,4 @@
-# SACM Git & GitHub Workshop
+# myPizzaStore
 
 Welcome! This repo is a safe place to practice Git and GitHub. You can't break
 anything here, so experiment freely.
