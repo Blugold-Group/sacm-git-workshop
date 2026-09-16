@@ -1,16 +1,1 @@
-# Sandboxes made by the exercise scripts
-playground/
-
-# Secrets: never commit these
-.env
-
-# Python
-__pycache__/
-*.pyc
-.venv/
-
-# Editors and OS files
-.vscode/
-.idea/
-.DS_Store
-Thumbs.db
+data/
