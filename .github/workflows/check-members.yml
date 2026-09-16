@@ -1,0 +1,32 @@
+name: Check member files
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+# Read-only: this workflow runs on pull requests from forks.
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check member files
+        if: github.event_name == 'pull_request'
+        env:
+          BASE_REF: ${{ github.base_ref }}
+        run: python scripts/check_members.py --base "origin/$BASE_REF"
+
+      - name: Check member files
+        if: github.event_name == 'push'
+        run: python scripts/check_members.py
