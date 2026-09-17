@@ -1,124 +1,362 @@
-# myPizzaStore
+# 🗿 SACM Git & GitHub Workshop: SIGMA VERITY EDITION
 
-Welcome! This repo is a safe place to practice Git and GitHub. You can't break
-anything here, so experiment freely.
+ Welcome to the **Git arena**.
 
-**Your goal today:** open your first pull request by adding a file about yourself
-to the [`members/`](members/) folder.
+ This repo is a safe place to practice Git and GitHub. You cannot break anything here.
 
-> **Before you start:** install Git ([git-scm.com](https://git-scm.com)), make a
-> [GitHub account](https://github.com/signup), and tell Git who you are:
+ **Unless you skill issue.**
+
+ Your objective is simple:
+
+ > **OPEN THE PULL REQUEST.**
 >
-> ```bash
-> git config --global user.name "Your Name"
-> git config --global user.email "you@uwec.edu"
-> ```
+>  Add a file about yourself to `members/`.
+>
+>  Become one with the branch.
+>
+>  Embrace **VERITY**.
 
 ---
 
-## Part 1: Your first pull request (about 15 minutes)
+ ## ⚡ BEFORE YOU LOCK IN
 
-### 1. Fork this repo
+ Install Git:
 
-Click **Fork** in the top-right corner of this page. This makes your own copy
-under your GitHub account, and you're allowed to push to that copy.
+ - [Git](<https://git-scm.com>)
+- [GitHub](<https://github.com/signup>)
 
-### 2. Clone your fork
+ Then establish your identity:
 
-On **your fork's** page, click the green **Code** button and copy the URL. Then:
+```
+git config --global user.name "Your Name"
+git config --global user.email "you@uwec.edu"
+```
 
-```bash
+ If Git asks who you are, **DO NOT PANIC.**
+
+ Git simply needs to know the identity of the warrior performing the commit.
+
+---
+
+ # 🗿 PART 1: YOUR FIRST PULL REQUEST
+
+ **Estimated time: 15 minutes**
+
+ **Difficulty: literally just follow the instructions**
+
+ **Aura requirement: nonzero**
+
+ ## 1\. FORK THE REPO
+
+ Click **Fork** in the top-right.
+
+ This creates your own copy.
+
+ Your repo.
+
+ Your branch.
+
+ Your destiny.
+
+ You may now push to it.
+
+ **VERITY ACHIEVED.**
+
+---
+
+ ## 2\. CLONE YOUR FORK
+
+ On **your fork**, click the green **Code** button and copy the URL.
+
+ Then:
+
+```
 git clone https://github.com/YOUR-USERNAME/sacm-git-workshop.git
 cd sacm-git-workshop
 ```
 
-> **Sign-in help:** GitHub doesn't accept your account password in the terminal.
-> The easiest option is the [GitHub CLI](https://cli.github.com): run
-> `gh auth login` once. SSH keys or a personal access token also work.
+ Congratulations.
 
-### 3. Create a branch
+ You have acquired the repository.
 
-```bash
+ ### 🧠 SIGN-IN LORE
+
+ GitHub does not accept your account password in the terminal.
+
+ The sigma path is the [GitHub CLI](<https://cli.github.com>):
+
+```
+gh auth login
+```
+
+ SSH keys and personal access tokens also work.
+
+ **Authentication is not optional.**
+
+---
+
+ ## 3\. CREATE YOUR BRANCH
+
+```
 git switch -c add-YOUR-USERNAME
 ```
 
-### 4. Add your member file
+ You have now escaped `main`.
 
-Copy the template, naming the new file after your GitHub username (it's
-case-sensitive and must match exactly):
+ You are no longer merely a contributor.
 
-```bash
+ You are **BRANCHED.**
+
+ > A branch is simply a timeline where your changes happen.
+>
+>  **Do not merge the wrong timeline.**
+
+---
+
+ ## 4\. ADD YOUR MEMBER FILE
+
+ Copy the template:
+
+```
 cp members/_template.md members/YOUR-USERNAME.md
 ```
 
-Open `members/YOUR-USERNAME.md` in any editor and fill it in.
+ Replace `YOUR-USERNAME` with your **actual GitHub username**.
 
-### 5. Commit
+ It is case-sensitive.
 
-```bash
-git status                     # your new file shows up in red
+ Open the file.
+
+ Fill it out.
+
+ Do not submit `_template.md`.
+
+ That would be an **unfortunate display of low verity**.
+
+---
+
+ ## 5\. COMMIT YOUR EXISTENCE
+
+ Check your status:
+
+```
+git status
+```
+
+ Your new file should appear in red.
+
+ Then:
+
+```
 git add members/YOUR-USERNAME.md
-git status                     # now it's green (staged)
+```
+
+ Check again:
+
+```
+git status
+```
+
+ Green.
+
+ **GREEN = STAGED.**
+
+ Then commit:
+
+```
 git commit -m "Add YOUR-USERNAME to members"
 ```
 
-### 6. Push
+ You have created history.
 
-```bash
+ History cannot be unmade.
+
+ Well, technically it can.
+
+ But that comes later.
+
+---
+
+ ## 6\. PUSH
+
+ Send your branch into the cloud:
+
+```
 git push -u origin add-YOUR-USERNAME
 ```
 
-### 7. Open the pull request
+ Your code has left the machine.
 
-Go to your fork on GitHub. You should see a yellow banner with a
-**Compare & pull request** button. Click it, fill in the template, and submit.
+ It is now **out there.**
 
-### 8. Watch the checks
+ There is no going back.
 
-An automated check runs on your pull request to make sure your file is filled
-in correctly. If it fails, click **Details** to see what to fix. Then fix the
-file, commit, and push again: the pull request updates automatically.
-
-When the check is green, an officer will review and merge it. 🎉
+ > `git push`
+>
+>  **The button has been pressed.**
 
 ---
 
-## Part 2: Bonus exercises
+ ## 7\. OPEN THE PULL REQUEST
 
-Finished early? Work through these on your own machine:
+ Go to your fork on GitHub.
 
-| Exercise | What you'll practice |
-| --- | --- |
-| [Merge conflicts](exercises/02-merge-conflict/) | Making a conflict on purpose and resolving it |
-| [Undoing things](exercises/03-undo/) | `restore`, `amend`, `revert`, and `reflog` |
-| [Branching](exercises/04-branching/) | Building a branch history and merging it |
+ You should see a yellow banner.
 
-The exercises use small shell scripts. On Windows, run them in **Git Bash**,
-which comes with Git for Windows.
+ It will contain:
 
-## Cheat sheet
+ **Compare & pull request**
 
-| I want to… | Command |
-| --- | --- |
-| See what changed | `git status`, `git diff` |
-| Stage a file | `git add <file>` |
-| Commit staged changes | `git commit -m "Message"` |
-| See history | `git log --oneline --graph` |
-| Create and switch to a branch | `git switch -c <name>` |
-| Switch branches | `git switch <name>` |
-| Get the latest from GitHub | `git pull` |
-| Send your commits to GitHub | `git push` |
-| Discard edits to a file | `git restore <file>` |
-| Unstage a file | `git restore --staged <file>` |
+ Click it.
 
-## Keep learning
+ Fill out the template.
 
-- [Pro Git](https://git-scm.com/book), the free book
-- [Learn Git Branching](https://learngitbranching.js.org), an interactive visual tutorial
-- [GitHub Skills](https://skills.github.com), guided courses that run in real repos
-- [Dangit, Git!?](https://dangitgit.com), plain-English fixes for common mistakes
+ Submit.
+
+ At this point, you have entered the sacred realm of:
+
+ # 🔥 PULL REQUEST
 
 ---
 
-Made for SACM, the student ACM chapter at UW–Eau Claire. Officers, see
-[docs/officer-guide.md](docs/officer-guide.md) before the workshop.
+ ## 8\. WATCH THE CHECKS
+
+ An automated check will inspect your file.
+
+ If it fails:
+
+ **DO NOT CRUMBLE.**
+
+ Click **Details**.
+
+ Read the error.
+
+ Fix the file.
+
+ Commit.
+
+ Push.
+
+ The pull request updates automatically.
+
+ This is the Git cycle:
+
+```
+EDIT
+  ↓
+COMMIT
+  ↓
+PUSH
+  ↓
+CHECK
+  ↓
+FAIL
+  ↓
+FIX
+  ↓
+COMMIT
+  ↓
+PUSH
+  ↓
+VERITY
+```
+
+ When the check is green, an officer will review and merge it.
+
+ 🎉 **YOU HAVE CONTRIBUTED.**
+
+ Your GitHub graph has received another pixel.
+
+ Your aura has increased by approximately 0.00001.
+
+---
+
+ # 🗿 PART 2: BONUS SIGMA EXERCISES
+
+ Finished early?
+
+ **You have chosen violence.**
+
+ Work through these on your own machine:
+
+ | Exercise | What you will learn |
+| --- | --- |
+| Merge conflicts | Create conflict. Become conflict. Resolve conflict. |
+| Undoing things | `restore`, `amend`, `revert`, and `reflog` — forbidden techniques |
+| Branching | Create timelines. Merge timelines. Become timeline manager. |
+
+The exercises use small shell scripts.
+
+ On Windows, use **Git Bash**, which comes with Git for Windows.
+
+ PowerShell may be watching.
+
+---
+
+ # ⚔️ CHEAT SHEET OF VERITY
+
+ | I want to… | Command | Sigma Translation |
+| --- | --- | --- |
+| See what changed | `git status`, `git diff` | **Observe.** |
+| Stage a file | `git add <file>` | **Prepare the offering.** |
+| Commit changes | `git commit -m "Message"` | **Create history.** |
+| See history | `git log --oneline --graph` | **Study the ancient texts.** |
+| Create a branch | `git switch -c <name>` | **Escape the timeline.** |
+| Switch branches | `git switch <name>` | **Change universes.** |
+| Get the latest | `git pull` | **Acquire knowledge.** |
+| Send commits | `git push` | **Release the beast.** |
+| Discard edits | `git restore <file>` | **It never happened.** |
+| Unstage a file | `git restore --staged <file>` | **Return the offering.** |
+
+---
+
+ # 🧠 KEEP LEARNING
+
+ The path to greater Git verity:
+
+ - [Pro Git](<https://git-scm.com/book>) — the free book
+- [Learn Git Branching](<https://learngitbranching.js.org>) — interactive visual Git combat
+- [GitHub Skills](<https://skills.github.com>) — guided courses inside real repositories
+- [Dangit, Git!?](<https://dangitgit.com>) — when Git has decided that you are no longer worthy
+
+---
+
+ # 🗿 FINAL VERITY
+
+ You started with:
+
+```
+"I don't know Git."
+```
+
+ You leave with:
+
+```
+"I have forked."
+"I have branched."
+"I have committed."
+"I have pushed."
+"I have opened the PR."
+```
+
+ You are now dangerous.
+
+ Use your powers responsibly.
+
+---
+
+ Made for **SACM**, the student ACM chapter at UW–Eau Claire.
+
+ Officers:
+
+ Read `docs/officer-guide.md` before the workshop.
+
+ **Stay sigma.**
+
+ **Commit often.**
+
+ **Push responsibly.**
+
+ **Seek verity.**
+
+ # 🗿
